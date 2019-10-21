@@ -1,0 +1,243 @@
+/* colour pallette */
+/*
+off white:	#f9f9f9
+light grey:	#f1f1f1
+mid grey:	#e0e0e0
+dark grey:	#353535
+*/
+
+/* <div> overflow fix */
+.clearfix::after {
+	content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+/* General page styling ***********/
+body, #wrapper, #header, #content, #footer {
+	font-family: arial, helvetica, sans-serif;
+  color: #353535; /* dark grey */
+}
+body, #header {
+	background-color: #f9f9f9; /* off white */
+}
+#wrapper, #content, #footer {
+	background-color: #f1f1f1; /* light grey */
+}
+#wrapper{
+	max-width: 960px;
+  margin: 0px auto;
+  padding: 0px;
+}
+#header, #footer, #banner, #content {
+	width: 100%;
+  margin: 0px auto;
+}
+body, #content {
+	font-size: 12px;
+}
+#hdrLogo, #ftrLogo {
+	margin: auto;
+  width: 100px;
+  height: 100px;
+}
+#hdrLogo > img, #ftrLogo > img {
+  width: 100px;
+  height: 100px;
+}
+h1, h2, .navbar, 
+#hdrtagline1, #hdrtagline2, 
+#ftrTagline1, #ftrtagline2 {
+	font-weight: lighter;
+}
+h1 {
+	font-size: 20px;
+}
+h2, #hdrTagline1, .galleryTxt{
+	font-size: 16px;
+}
+
+/* navigation styling ***********/
+#hdrNavbar {
+	width: 80%;
+}
+.navbar {
+	margin: 10px auto;
+  padding: 10px;
+  text-align: center;
+  word-spacing: 50px;
+}
+.navData {
+	display: inline-block;
+	position: relative;
+}
+.navData > a > img {
+	height: 8px;
+  vertical-align: text-top;
+}
+.navData > a:link, .navData > a:visited {
+  text-decoration: none;
+  color: #353535; /* dark grey */
+}
+.navData > a:active, .navData > a:hover {
+	text-decoration: none;
+  color: orange;
+}
+.popUpMenu > a:link, .popUpMenu > a:visited {
+  text-decoration: none;
+  color: #f9f9f9; /* off white */
+}
+.popUpMenu > a:active, .popUpMenu > a:hover {
+	text-decoration: none;
+  color: orange;
+}
+#popUpMenu2, #popUpMenu3, #popUpMenu4 {
+	display: none;
+	position: absolute;
+  z-index: +2;
+	background-color: #353535; /* dark grey */
+  margin: 5px 5px 0px 5px;
+  padding: 5px 10px 5px 5px;
+  width: 110px;
+  word-spacing: normal;
+  line-height: 1.5;
+  text-align: left;
+}
+.navData > a, #popUpMenu2 > a, #popUpMenu3 > a, #popUpMenu4 > a {
+	cursor: pointer;
+}
+
+/* header styling **********/
+#banner {
+	background-color: #e0e0e0; /* mid grey */
+  background-image: url(../images/banner.jpg);
+  position: relative;
+  padding: 50px 0px 100px 0px;
+	height: 100px;
+}
+#hdrTagline1, #hdrTagline2 {
+	margin: 10px;
+	text-align: center;
+  letter-spacing: 6px;
+  color: #f9f9f9; /* off white */
+}
+
+/* content styling **********/
+.section, #welcome, #portfolio, #aboutMe, .galleryTxt, #blank_link {
+	text-align: center;
+}
+#welcome, #portfolio, #aboutMe {
+	margin: 30px auto;
+}
+#welcome, #aboutMe {
+	width: 80%;
+}
+.section {
+	background-color: #f1f1f1; /* light grey */
+  padding: 0px;
+}
+/* welcome styling **********/
+#welcome {
+	padding: 10px;
+}
+
+/* portfolio styling **********/
+#portfolio, #gallery {
+  padding: 0px;
+}
+#portfolio {
+  max-width: 800px;
+}
+.galleryImg, .galleryImg > a > img {
+	width: 240px;
+}
+.galleryImg {
+	display: inline-flex;
+  position: relative;
+	margin: 17px 10px;
+  padding: 0px;
+}
+.galleryImg > a > img {
+	position: absolute;
+  z-index: +1;
+}
+.galleryTxt {
+	position: relative;
+  z-index: +2;
+	margin: 70px auto;
+	color: #f9f9f9; /* off white */
+}
+
+/* about me styling **********/
+#aboutMe {
+	background-color: #e0e0e0; /* mid grey */
+  margin: 0px auto;
+  padding: 30px 0px;
+}
+.aboutPhoto,.aboutTxt  {
+  margin: 15px auto;
+}
+.aboutPhoto {
+  background-color: #fff;
+	width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+.aboutTxt {
+	width: 80%;
+}
+.socialImg {
+	display: inline-block;
+	margin-top: 10px;
+  padding: 10px;
+  width: 30px;
+}
+  
+/* footer styling **********/
+#footer {
+	padding: 10px 0px;
+}
+#ftrTagline1, #ftrTagline2 {
+	font-size: 12px;
+	margin: 10px;
+	text-align: center;
+  letter-spacing: 4px;
+  color: #353535; /* dark grey */
+}
+
+/* blank_link page styling **********/
+#blank_link {
+	padding: 30px 0px 
+}
+#waracle {
+	margin: 0px auto;
+}
+
+/* responsive styling **********/
+@media only screen and (max-width: 540px) {
+
+/* navigation styling ***********/
+	#hdrNavbar {
+		width: 95%;
+	}
+	.navbar {
+  	word-spacing: 25px;
+	}
+/* content styling ***********/
+  #welcome, #portfolio, #aboutMe {
+		width: 95%;
+    margin: 30px auto 0px auto;
+	}
+/* portfolio styling **********/
+	.galleryImg, .galleryImg > a > img {
+  margin: 10px auto;
+	width: 100%;
+	}
+  .galleryImg {
+	height: 226px;
+  }
+  .galleryTxt {
+  	margin-top: 110px;
+  }  
+}
